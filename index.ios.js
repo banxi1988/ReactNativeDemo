@@ -106,7 +106,7 @@ class ReactNativeDemoList extends Component{
     render(){
         return (
         <ListView
-            style={{paddingTop:64,flex:1,backgroundColor:'#eaeaea', borderTopWidth:1,borderColor:'#ccc'}}
+            style={{flex:1,backgroundColor:'#eaeaea', borderTopWidth:1,borderColor:'#ccc'}}
             dataSource = { this.state.dataSource}
             renderRow = {this._renderRow}
         />
