@@ -23,17 +23,24 @@ class RightDetailCell extends Component{
             borderBottomWidth:1,
             borderColor:'#ccc'
         };
+        this.titleStyle = { };
+        this.detailStyle = { color:'#999999',fontSize:13,textAlign:'right' };
     }
     render(){
         return (
-            <TouchableHighlight onPress={() => this._pressRow(rowData)} >
+            <TouchableHighlight onPress={this.props.onPress} >
                 <View style={this.cellStyles}>
-                    <View>
+                    <View style={{flex:1}}>
                     <Text>
                         {this.props.title}
                     </Text>
                     </View>
-                    <Text style={{marginRight:15,color:'#cccccc'}}>
+                    <View>
+                    <Text style={this.detailStyle}>
+                        {this.props.detail}
+                    </Text>
+                    </View>
+                    <Text style={{marginLeft:8,marginRight:15,color:'#cccccc'}}>
                     &gt;
                     </Text>
                 </View>

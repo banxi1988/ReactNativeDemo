@@ -25,7 +25,7 @@ class SettingsController extends Component {
     <View style={{marginTop:64}}>
       <ScrollView style={{}}>
           <RightDetailCell title="设置项1"/>
-          <RightDetailCell title="设置项2"/>
+          <RightDetailCell title="设置项2" detail="点击查看详情"/>
       </ScrollView>
       </View>
     );
