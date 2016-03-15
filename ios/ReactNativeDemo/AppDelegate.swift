@@ -9,6 +9,10 @@
 import UIKit
 
 
+func rootViewController() -> UIViewController?{
+  return UIApplication.sharedApplication().delegate?.window??.rootViewController
+}
+
 @UIApplicationMain
 class AppDelegate:UIResponder, UIApplicationDelegate {
   

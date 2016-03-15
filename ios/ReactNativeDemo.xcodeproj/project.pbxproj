@@ -20,6 +20,8 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		146834051AC3E58100842450 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 146834041AC3E56700842450 /* libReact.a */; };
 		2BBA3875295565951BBF2C94 /* Pods_ReactNativeDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 520259FEBEB100BB78B6EE6D /* Pods_ReactNativeDemo.framework */; };
+		3E8A57291C97F28A00E8E77D /* ReactComponentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A57281C97F28A00E8E77D /* ReactComponentPresenter.swift */; };
+		3E8A572A1C97F82400E8E77D /* NSObject_Swift_ReactNative_JS_Bridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E8A571D1C97F1D200E8E77D /* NSObject_Swift_ReactNative_JS_Bridge.m */; };
 		3EFDB7431C93BE6500156993 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFDB7421C93BE6500156993 /* AppDelegate.swift */; };
 		3EFDB74F1C93C81D00156993 /* DemoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3EFDB74E1C93C81D00156993 /* DemoListViewController.swift */; };
 		6D502BF1ABC2B6DBF0B8AA29 /* Pods_ReactNativeDemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 22A74A8AFD52EF9A480A6E94 /* Pods_ReactNativeDemoTests.framework */; };
@@ -125,6 +127,8 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ReactNativeDemo/Info.plist; sourceTree = "<group>"; };
 		146833FF1AC3E56700842450 /* React.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = React.xcodeproj; path = "../node_modules/react-native/React/React.xcodeproj"; sourceTree = "<group>"; };
 		22A74A8AFD52EF9A480A6E94 /* Pods_ReactNativeDemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ReactNativeDemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E8A571D1C97F1D200E8E77D /* NSObject_Swift_ReactNative_JS_Bridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NSObject_Swift_ReactNative_JS_Bridge.m; path = ReactNativeDemo/NSObject_Swift_ReactNative_JS_Bridge.m; sourceTree = "<group>"; };
+		3E8A57281C97F28A00E8E77D /* ReactComponentPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReactComponentPresenter.swift; path = ReactNativeDemo/ReactComponentPresenter.swift; sourceTree = "<group>"; };
 		3EFDB7411C93BE6400156993 /* ReactNativeDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		3EFDB7421C93BE6500156993 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ReactNativeDemo/AppDelegate.swift; sourceTree = "<group>"; };
 		3EFDB74E1C93C81D00156993 /* DemoListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DemoListViewController.swift; path = ReactNativeDemo/DemoListViewController.swift; sourceTree = "<group>"; };
@@ -260,6 +264,8 @@
 				3EFDB7421C93BE6500156993 /* AppDelegate.swift */,
 				3EFDB7411C93BE6400156993 /* ReactNativeDemo-Bridging-Header.h */,
 				3EFDB74E1C93C81D00156993 /* DemoListViewController.swift */,
+				3E8A571D1C97F1D200E8E77D /* NSObject_Swift_ReactNative_JS_Bridge.m */,
+				3E8A57281C97F28A00E8E77D /* ReactComponentPresenter.swift */,
 			);
 			name = ReactNativeDemo;
 			sourceTree = "<group>";
@@ -672,6 +678,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				3EFDB7431C93BE6500156993 /* AppDelegate.swift in Sources */,
+				3E8A57291C97F28A00E8E77D /* ReactComponentPresenter.swift in Sources */,
+				3E8A572A1C97F82400E8E77D /* NSObject_Swift_ReactNative_JS_Bridge.m in Sources */,
 				3EFDB74F1C93C81D00156993 /* DemoListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

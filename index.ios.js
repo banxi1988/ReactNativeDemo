@@ -5,6 +5,7 @@
 'use strict';
 import React, {
   AppRegistry,
+  NativeModules,
   Component,
   Navigator,
   TouchableOpacity,
@@ -15,6 +16,8 @@ import React, {
   Text,
   View
 } from 'react-native';
+
+import {RightDetailCell} from './tableview-kit';
 
 
 class NavButton extends Component{
@@ -75,7 +78,6 @@ class ReactNativeDemoListRoot extends Component{
     render(){
         return (
         <Navigator
-        navigationBar = {<Navigator.NavigationBar routeMapper = {NavigationBarRouteMapper} />}
         initialRoute ={{title:'Demo 展示列表',name:"demoList"}}
         renderScene ={ (route,navigator) => (
             <ReactNativeDemoList title={route.title} name={route.name}/>
@@ -106,7 +108,7 @@ class ReactNativeDemoList extends Component{
     render(){
         return (
         <ListView
-            style={{flex:1,backgroundColor:'#eaeaea', borderTopWidth:1,borderColor:'#ccc'}}
+            style={{backgroundColor:'#fff',marginTop:64, borderTopWidth:0.5,borderColor:'#ccc'}}
             dataSource = { this.state.dataSource}
             renderRow = {this._renderRow}
         />
@@ -115,19 +117,12 @@ class ReactNativeDemoList extends Component{
 
     _renderRow(rowData){
         return (
-            <TouchableHighlight onPress={() => this._pressRow(rowData)} >
-                <View style={dl_styles.row}>
-                    <View>
-                    <Text>
-                        {rowData.title}
-                    </Text>
-                    </View>
-                    <Text style={{marginRight:15,color:'#cccccc'}}>
-                    &gt;
-                    </Text>
-                </View>
-            </TouchableHighlight>
+            <RightDetailCell title={rowData.title}  onPress={() => NativeModules.ReactComponentPresenter.pushComponent(rowData.id,rowData.title)}/>
         )
+    }
+
+    _pressRow(rowData){
+        NativeModules.ReactComponentPresenter.pushComponent(rowData.id,rowData.title);
     }
 }
 
@@ -144,22 +139,7 @@ var dl_styles = StyleSheet.create({
     }
 });
 
-var MOCKED_MOVIE_DATA = [
-    { title:"中华田园犬的日常", year:'2015', posters:{thumbnail:'http://ww3.sinaimg.cn/large/72973f93jw1f14wub2mqkj20qo0zkdlq.jpg'}}
-];
 
-class ReactNativeDemo extends Component {
-  render() {
-    var movie = MOCKED_MOVIE_DATA[0];
-    return (
-      <View style={styles.container}>
-      <Text>{movie.title}</Text>
-      <Text>{movie.year}</Text>
-      <Image source={{uri:movie.posters.thumbnail}} style={styles.thumbnail}/>
-      </View>
-    );
-  }
-}
 
 const styles = StyleSheet.create({
   container: {
@@ -184,6 +164,5 @@ const styles = StyleSheet.create({
   },
 });
 
-AppRegistry.registerComponent('ReactNativeDemo', () => ReactNativeDemo);
 AppRegistry.registerComponent('ReactNativeDemoList', () => ReactNativeDemoList);
 AppRegistry.registerComponent('ReactNativeDemoListRoot', () => ReactNativeDemoListRoot);

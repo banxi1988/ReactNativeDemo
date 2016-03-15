@@ -11,8 +11,10 @@ import React, {
 } from 'react-native';
 
 class RightDetailCell extends Component{
-    constructor(){
+    constructor(props){
         super();
+        this.props = props
+        console.log("this.props.onPress",this.props.onPress);
         this.cellStyles = {
             flexDirection:'row',
             flexWrap:'nowrap',
